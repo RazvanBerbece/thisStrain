@@ -1,5 +1,5 @@
 # thisStrain
-Python-side, creates a ML model which identifies cannabis strains using a dataset of images scraped from the internet. The model takes as input an Image with (supposedly) a cannabis leaf and outputs its strain. Client-side (Swift), analyses the input image and outputs the strain label in a nicely-finished UI.
+Python-side, creates a ML model which identifies cannabis strains using a dataset of images scraped from the internet. The model takes as input an Image with (supposedly) a cannabis leaf and outputs its strain. Client-side (Swift), sends a request to the API made in Flask (which encorporates the ML model) with an encoded image and receives the output of the model.
 
 # Status
 - [x] API
@@ -35,7 +35,7 @@ The Client is built in Swift and uses an AR Session View for easy image classifi
 - SwiftyJSON
 
 # Use and installation :
-Sadly, as I haven't found a way yet to deploy the ML Model (due to file size reasons mainly), the model has to be trained on the machine by installing the required pip packages and then :
+Unfortunately, as I haven't found a way yet to deploy the ML Model (due to file size reasons mainly), the model has to be trained on the machine by installing the required pip packages and then :
 1. Use the script found at *API/Crawler/src/main.py* to scrape the pictures from the website
 2. Move the scraped image folder into a folder named *Data*  in *API/ImageClassifierML*
 3. Run the script at *API/ImageClassifierML/classifier.py* to train the model and generate the label binarizer and the Keras model file

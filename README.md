@@ -21,8 +21,9 @@ The Server related methodology can be found in **API/Server** and an example of 
 Data images are passed to the API by encoding them in a *base64string*. The result is a **JSON** structure which holds a dictionary of type { "*Output*" : ["<*label*>", "<*accuracy*>"]
 
 ### API Calls :
-> http://<FLASK HOST ADDRESS>:<PORT>/ (GET, checks API availability)
-> http://<FLASK HOST ADDRESS>:<PORT>/predictOnImage (**POST**, **form-data** with format : **"data" : base64string**, sends base64 encoded image to Server and get the output of the ML model)
+> http://<FLASK HOST ADDRESS>:<PORT>**/** (GET, checks API availability)
+
+> http://<FLASK HOST ADDRESS>:<PORT>**/predictOnImage** (**POST**, **form-data** with format : **"data" : base64string**, sends base64 encoded image to Server and get the output of the ML model)
 
 # Client - Swift (UIKit)
 The Client is built in Swift and uses an AR Session View for easy image classification at the press of a button.

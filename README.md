@@ -20,7 +20,7 @@ The API works by running it locally in a virtualenv and allowing Flask to host t
     
 The Server related methodology can be found in **API/Server** and an example of a Python Client can be found in **API/ClientExample**
 
-Data images are passed to the API by encoding them in a *base64string*. The result is a **JSON** structure which holds a dictionary of type { "*Output*" : ["<*label*>", "<*accuracy*>"]
+Data images are passed to the API by encoding them in a *base64string*. The result is a **JSON** structure which holds a dictionary of type { "*Output*" : ["<*label*>", "<*accuracy*>"] }
 
 ### API Calls :
 > http://FLASK_HOST_ADDRESS:PORT/ (GET, checks API availability)
@@ -35,8 +35,8 @@ The Client is built in Swift and uses an AR Session View for easy image classifi
 - SwiftyJSON
 
 # Use and installation :
-Unfortunately, as I haven't found a way yet to deploy the ML Model (due to file size reasons mainly), the model has to be trained on the machine by installing the required pip packages and then :
-1. Use the script found at *API/Crawler/src/main.py* to scrape the pictures from the website
-2. Move the scraped image folder into a folder named *Data*  in *API/ImageClassifierML*
-3. Run the script at *API/ImageClassifierML/classifier.py* to train the model and generate the label binarizer and the Keras model file
-4. Training parameters can be fine-tuned in the file at step 3, and I'd be more than happy to hear about whatever improvements to the model anyone can bring.
+Unfortunately, as I haven't found a way yet to deploy the ML Model (due to file size reasons mainly), the model has to be trained on the machine and the webpage scraped by installing the required pip packages and then :
+1. Use the script found at **API/Crawler/src/main.py** to scrape the pictures from the website
+2. Move the scraped image folder into a folder named **Data**  in **API/ImageClassifierML**
+3. Run the script at **API/ImageClassifierML/classifier.py** to train the model and generate the label binarizer and the Keras model file
+4. **Training parameters can be fine-tuned in the file at step 3, and I'd be more than happy to hear about whatever improvements to the model anyone can bring**

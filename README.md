@@ -18,6 +18,7 @@ The API works by running it locally in a virtualenv and allowing Flask to host t
 - the **Image Classifier** (found in **API/ImageClassifierML**)
     - Machine Learning Model which uses a CNN trained on the pictures gathered by the Crawler above. The input is comprised of an image (which is resized to 150 x 150 px) and the output is the strain of the cannabis depicted in the picture and the accuracy of the classification.
 The Server related methodology can be found in **API/Server** and an example of a Python Client can be found in **API/ClientExample**
+
 Data images are passed to the API by encoding them in a *base64string*. The result is a **JSON** structure which holds a dictionary of type { "*Output*" : ["<*label*>", "<*accuracy*>"]
 
 ### API Calls :

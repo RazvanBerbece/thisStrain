@@ -1,0 +1,6 @@
+framework module Pods_thisStrain {
+  umbrella header "Pods-thisStrain-umbrella.h"
+
+  export *
+  module * { export * }
+}

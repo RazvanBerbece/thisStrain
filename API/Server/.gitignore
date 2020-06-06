@@ -1,0 +1,10 @@
+__pycache__/
+venv/
+.azure/
+.DS_Store
+app/.DS_Store
+app.yaml
+strainClassifier
+.gcloudignore
+requirements.txt
+labelBinarizer

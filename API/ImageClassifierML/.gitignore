@@ -1,0 +1,6 @@
+Data/
+TestPhotos/
+strainClassifier
+labelBinarizer
+__pycache__/
+.vscode/
